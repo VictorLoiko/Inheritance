@@ -10,6 +10,6 @@ public class Microwave extends Goods implements Appliance {
 
     @Override
     public String getAppointment() {
-        return null;
+        return "Микроволновка необходима, чтобы разогревать еду";
     }
 }

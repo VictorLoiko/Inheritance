@@ -10,6 +10,6 @@ public class Refrigerator extends Goods implements Appliance {
 
     @Override
     public String getAppointment() {
-        return null;
+        return "Холодильник нужен, чтобы охлаждать еду";
     }
 }
