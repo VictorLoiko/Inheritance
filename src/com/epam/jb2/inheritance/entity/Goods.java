@@ -2,7 +2,7 @@ package com.epam.jb2.inheritance.entity;
 
 import java.util.Objects;
 
-public class Goods {
+public class Goods implements Comparable<Goods> {
     int id;
     String name;
     double price;
@@ -13,7 +13,7 @@ public class Goods {
         this.price = price;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return this.price;
     }
 
@@ -40,6 +40,13 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods{" + "id=" + id + ", name='" + name + '\'' + ", price=" + price + '}';
+        return "{" + "id=" + id + ", name='" + name + '\'' + ", price=" + price + '}' + '\n';
+    }
+
+    @Override
+    public int compareTo(Goods o) {
+        if (this.id > o.getId()) return 1;
+        else if (this.id < o.getId()) return -1;
+        return 0;
     }
 }
